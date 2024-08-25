@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bvcdq4hfysvnq"]
+
+[ext_resource type="Texture2D" uid="uid://bwxcbdxdirp0w" path="res://World/Tree.png" id="1_k32jd"]
+[ext_resource type="Texture2D" uid="uid://b6vcpwb7lxrsp" path="res://Shadows/LargeShadow.png" id="2_goq80"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gwhxb"]
+
+[node name="Tree" type="StaticBody2D"]
+
+[node name="ShadowSprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_goq80")
+
+[node name="TreeSprite" type="Sprite2D" parent="."]
+position = Vector2(0, -16)
+texture = ExtResource("1_k32jd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -2)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_gwhxb")
